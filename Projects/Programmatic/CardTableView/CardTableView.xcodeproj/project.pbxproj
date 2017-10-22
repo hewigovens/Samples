@@ -25,6 +25,7 @@
 		96B5DF931DBADCA600A15DCE /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5DF781DBADCA600A15DCE /* SampleData.swift */; };
 		96B5E0161DBBF13400A15DCE /* AppFABMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5E0151DBBF13400A15DCE /* AppFABMenuController.swift */; };
 		96B5E01E1DBBF6EE00A15DCE /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5E01D1DBBF6EE00A15DCE /* AppTabBarController.swift */; };
+		D230D66B6F1C9694747F0B48 /* Pods_CardTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D5D4CBD1AE5AB8BEF7A71D /* Pods_CardTableView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		25956630F52139376148B427 /* Pods-CardTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardTableView/Pods-CardTableView.debug.xcconfig"; sourceTree = "<group>"; };
+		36D5D4CBD1AE5AB8BEF7A71D /* Pods_CardTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F078A26EEB787B48F6D97A8 /* Pods-CardTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardTableView/Pods-CardTableView.release.xcconfig"; sourceTree = "<group>"; };
 		961409F21E44969000E7BA99 /* Graph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Graph.framework; path = "../../../Graph/build/Debug-iphoneos/Graph.framework"; sourceTree = "<group>"; };
 		961409F41E44969800E7BA99 /* Graph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Graph.framework; path = "../../../Graph/build/Debug-iphoneos/Graph.framework"; sourceTree = "<group>"; };
 		96A375E01DBD02C900FBB799 /* photo6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo6.jpg; sourceTree = "<group>"; };
@@ -70,17 +74,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D230D66B6F1C9694747F0B48 /* Pods_CardTableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		500E98FFD83553C0FD824ED0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25956630F52139376148B427 /* Pods-CardTableView.debug.xcconfig */,
+				5F078A26EEB787B48F6D97A8 /* Pods-CardTableView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		961409F11E44968F00E7BA99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				961409F41E44969800E7BA99 /* Graph.framework */,
 				961409F21E44969000E7BA99 /* Graph.framework */,
+				36D5D4CBD1AE5AB8BEF7A71D /* Pods_CardTableView.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,6 +106,7 @@
 				96B5DF5C1DBADCA600A15DCE /* CardTableView */,
 				96B5DEA51DB8572600A15DCE /* Products */,
 				961409F11E44968F00E7BA99 /* Frameworks */,
+				500E98FFD83553C0FD824ED0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,10 +159,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96B5DEB61DB8572600A15DCE /* Build configuration list for PBXNativeTarget "CardTableView" */;
 			buildPhases = (
+				9CDD73A7650E4E72E55479CA /* [CP] Check Pods Manifest.lock */,
 				96B5DEA01DB8572600A15DCE /* Sources */,
 				96B5DEA11DB8572600A15DCE /* Frameworks */,
 				96B5DEA21DB8572600A15DCE /* Resources */,
 				96B5DEBF1DB8592200A15DCE /* Embed Frameworks */,
+				23090992F58B4043E766E89B /* [CP] Embed Pods Frameworks */,
+				9F920896CD46012787B27F0C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +229,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23090992F58B4043E766E89B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CardTableView/Pods-CardTableView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Graph/Graph.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Graph.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardTableView/Pods-CardTableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CDD73A7650E4E72E55479CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CardTableView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F920896CD46012787B27F0C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardTableView/Pods-CardTableView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96B5DEA01DB8572600A15DCE /* Sources */ = {
@@ -350,6 +427,7 @@
 		};
 		96B5DEB71DB8572600A15DCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25956630F52139376148B427 /* Pods-CardTableView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -357,12 +435,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cosmicmind.CardTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		96B5DEB81DB8572600A15DCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F078A26EEB787B48F6D97A8 /* Pods-CardTableView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -370,7 +449,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cosmicmind.CardTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

@@ -32,6 +32,52 @@ import UIKit
 import Material
 import Graph
 
+extension UIView {
+    open var height: CGFloat {
+        get {
+            return self.frame.size.height
+        }
+        set {
+            var frame = self.frame
+            frame.size.height = newValue
+            self.frame = frame
+        }
+    }
+
+    open var width: CGFloat {
+        get {
+            return self.frame.size.width
+        }
+        set {
+            var frame = self.frame
+            frame.size.width = newValue
+            self.frame = frame
+        }
+    }
+
+    open var x: CGFloat {
+        get {
+            return self.frame.origin.x
+        }
+        set {
+            var frame = self.frame
+            frame.origin.x = newValue
+            self.frame = frame
+        }
+    }
+
+    open var y: CGFloat {
+        get {
+            return self.frame.origin.y
+        }
+        set {
+            var frame = self.frame
+            frame.origin.y = newValue
+            self.frame = frame
+        }
+    }
+}
+
 class CardTableViewCell: TableViewCell {
     private var spacing: CGFloat = 10
     
@@ -64,7 +110,7 @@ class CardTableViewCell: TableViewCell {
     }
     
     /// Calculating dynamic height.
-    open override var height: CGFloat {
+    var _height: CGFloat {
         get {
             return card.height + spacing
         }

@@ -81,7 +81,7 @@ extension CardTableView: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CardTableViewCell", for: indexPath) as! CardTableViewCell
         cell.data = data[indexPath.row]
         cell.isLast = indexPath.row == data.count - 1
-        heights[indexPath] = cell.height
+        heights[indexPath] = cell._height
         return cell
     }
 }
